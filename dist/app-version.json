@@ -1,6 +1,6 @@
 {
-  "versionCode": 1,
-  "versionName": "0.5",
-  "apkUrl": "https://github.com/BL-CORP-T/ExamPrep/releases/download/v0.5/app-release.apk",
-  "releaseNotes": "Первая версия приложения."
+  "versionCode": 2,
+  "versionName": "0.6",
+  "apkUrl": "https://github.com/BL-CORP-T/ExamPrep/releases/download/v0.6/app-release.apk",
+  "releaseNotes": "Исправлена работа системы достижений, добавлена функция обнуления прогресса, уведомления о достижениях"
 }
