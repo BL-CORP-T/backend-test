@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "generatedAt": "2026-07-19T15:02:31.749Z",
+  "version": 2,
+  "generatedAt": "2026-07-19T15:18:37.272Z",
   "subjects": [
     {
       "id": "math",
@@ -19,6 +19,12 @@
       "name": "Физика",
       "examType": "OGE",
       "topicsCount": 4
+    },
+    {
+      "id": "test",
+      "name": "Тест",
+      "examType": "OGE",
+      "topicsCount": 1
     }
   ],
   "topics": [
@@ -135,6 +141,12 @@
       "subjectId": "phys",
       "name": "Оптика и квантовые явления",
       "taskNumberInExam": 4
+    },
+    {
+      "id": "test_test",
+      "subjectId": "test",
+      "name": "Тест",
+      "taskNumberInExam": 1
     }
   ],
   "questions": [
@@ -976,6 +988,27 @@
       "correctOptionId": "a",
       "correctShortAnswer": null,
       "explanation": "Изменение направления луча на границе двух сред называется преломлением света.",
+      "difficulty": 1
+    },
+    {
+      "id": "test_test_1",
+      "topicId": "test_test",
+      "examType": "OGE",
+      "text": "В каком слове пропущена буква Е: пр…образовать, пр…града, пр…рвать?",
+      "imageUrl": null,
+      "optionIds": [
+        "a",
+        "b",
+        "c"
+      ],
+      "optionTexts": [
+        "пр_образовать",
+        "пр_града",
+        "пр_рвать"
+      ],
+      "correctOptionId": "b",
+      "correctShortAnswer": null,
+      "explanation": "«Преграда» пишется с «пре-» в значении «через, очень».",
       "difficulty": 1
     }
   ]

@@ -25,7 +25,7 @@ function readJson(fileName) {
 
 const subjects = readJson("subjects.json");
 const topics = readJson("topics.json");
-const questionFiles = ["questions_math_oge.json", "questions_rus_oge.json", "questions_phys_oge.json"];
+const questionFiles = ["questions_math_oge.json", "questions_rus_oge.json", "questions_phys_oge.json", "questions_test_oge.json"];
 const questions = questionFiles.flatMap((file) => readJson(file));
 
 let version = 1;

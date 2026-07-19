@@ -1,0 +1,3 @@
+[
+  { "id": "test_test_1", "topicId": "test_test", "examType": "OGE", "text": "В каком слове пропущена буква Е: пр…образовать, пр…града, пр…рвать?", "imageUrl": null, "optionIds": ["a","b","c"], "optionTexts": ["пр_образовать","пр_града","пр_рвать"], "correctOptionId": "b", "correctShortAnswer": null, "explanation": "«Преграда» пишется с «пре-» в значении «через, очень».", "difficulty": 1 }
+]

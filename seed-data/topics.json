@@ -19,5 +19,7 @@
   { "id": "phys_mech", "subjectId": "phys", "name": "Механика", "taskNumberInExam": 1 },
   { "id": "phys_thermal", "subjectId": "phys", "name": "Тепловые явления", "taskNumberInExam": 2 },
   { "id": "phys_electro", "subjectId": "phys", "name": "Электродинамика", "taskNumberInExam": 3 },
-  { "id": "phys_optics", "subjectId": "phys", "name": "Оптика и квантовые явления", "taskNumberInExam": 4 }
+  { "id": "phys_optics", "subjectId": "phys", "name": "Оптика и квантовые явления", "taskNumberInExam": 4 },
+
+  { "id": "test_test", "subjectId": "test", "name": "Тест", "taskNumberInExam": 1 }
 ]

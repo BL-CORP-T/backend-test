@@ -1,5 +1,6 @@
 [
   { "id": "math", "name": "Математика", "examType": "OGE", "topicsCount": 10 },
   { "id": "rus", "name": "Русский язык", "examType": "OGE", "topicsCount": 5 },
-  { "id": "phys", "name": "Физика", "examType": "OGE", "topicsCount": 4 }
+  { "id": "phys", "name": "Физика", "examType": "OGE", "topicsCount": 4 },
+  { "id": "test", "name": "Тест", "examType": "OGE", "topicsCount": 1 }
 ]
