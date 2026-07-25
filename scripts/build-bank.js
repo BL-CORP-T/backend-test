@@ -1,14 +1,11 @@
 /**
  * Собирает все JSON-файлы из seed-data/ в один файл dist/oge_bank.json,
- * который потом просто загружается в ваш GitHub-репозиторий — никакого
- * сервера, npm-пакетов или аккаунтов не требуется, только Node.js
- * (он уже есть, если вы ставили Android Studio с JS-плагинами, но проще
- * всего просто скачать Node с nodejs.org — это тоже бесплатно).
+ * который потом просто загружается в GitHub-репозиторий, требуется только Node.js
  *
- * Запуск:
+ * Запуск скрипта выполняется из корня проекта в командной строке:
  *   node scripts/build-bank.js
  *
- * Каждый запуск увеличивает версию банка на 1 (хранится в version.txt) —
+ * Каждый запуск увеличивает версию банка на 1 (хранится в version.txt)
  * именно по этому номеру версии приложение определяет, что появилось
  * обновление (см. BankSyncRepository.checkForUpdates в Android-проекте).
  */
@@ -25,8 +22,10 @@ function readJson(fileName) {
 
 const subjects = readJson("subjects.json");
 const topics = readJson("topics.json");
-const questionFiles = ["questions_math_oge.json", "questions_rus_oge.json", "questions_phys_oge.json", "questions_test_oge.json"];
+// questionFiles: Обновлять при добавлении новых предметов с вопросами к ним
+const questionFiles = ["questions_math_oge.json", "questions_rus_oge.json", "questions_phys_oge.json"];
 const questions = questionFiles.flatMap((file) => readJson(file));
+const theory = readJson("theory.json");
 
 let version = 1;
 if (fs.existsSync(versionFile)) {
@@ -39,12 +38,13 @@ const bank = {
   generatedAt: new Date().toISOString(),
   subjects,
   topics,
-  questions
+  questions,
+  theory
 };
 
 if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
 fs.writeFileSync(path.join(distDir, "oge_bank.json"), JSON.stringify(bank, null, 2));
 
-console.log(`Собрано: oge_bank.json, версия ${version}`);
-console.log(`Предметов: ${subjects.length}, тем: ${topics.length}, заданий: ${questions.length}`);
-console.log(`Не забудьте закоммитить и запушить dist/oge_bank.json и version.txt в GitHub.`);
+console.log(`oge_bank.json собран, версия ${version}`);
+console.log(`Предметов: ${subjects.length}, тем: ${topics.length}, заданий: ${questions.length}, статей теории: ${theory.length}`);
+console.log(`Не забуть закоммитить и запушить в GitHub.`);
